@@ -1,5 +1,5 @@
 ```
-⛽ HAMT-Fuel V2 — Hierarchical Attention-based Multi-Task Fuel Efficiency Prediction
+⛽ HAMT-Fuel — Hierarchical Attention-based Multi-Task Fuel Efficiency Prediction
 
 ================================================================================================
 
