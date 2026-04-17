@@ -64,8 +64,19 @@ def dark_layout(**overrides):
         title_font=dict(color='#000000'),
         legend=dict(bgcolor="#ffffff", bordercolor='#000000', font=dict(color='#000000')),
     )
-    default_xaxis = dict(gridcolor='#1e3a5f', zerolinecolor='#1e3a5f', tickfont=dict(color='#000000'),  title_font=dict(color='#000000'))
-    default_yaxis = dict(gridcolor='#1e3a5f', zerolinecolor='#1e3a5f', tickfont=dict(color='#000000'),  title_font=dict(color='#000000'))
+    default_xaxis = dict(
+    showgrid=False,
+    zeroline=False,
+    tickfont=dict(color='#000000'),
+    title_font=dict(color='#000000')
+)
+
+    default_yaxis = dict(
+        showgrid=False,
+        zeroline=False,
+        tickfont=dict(color='#000000'),
+        title_font=dict(color='#000000')
+    )
     default_margin = dict(l=40, r=20, t=40, b=40)
     if 'xaxis' in overrides:
         merged_x = {**default_xaxis, **overrides.pop('xaxis')}
@@ -1218,11 +1229,11 @@ elif page == "🔍 Live Inference":
                 for j in range(1, 3):
                     fig_tele.update_xaxes(
                         gridcolor='#f1f5f9', zerolinecolor='#e2e8f0',
-                        showgrid=True, row=i, col=j
+                        showgrid=False, row=i, col=j
                     )
                     fig_tele.update_yaxes(
                         gridcolor='#f1f5f9', zerolinecolor='#e2e8f0',
-                        showgrid=True, row=i, col=j
+                        showgrid=False, row=i, col=j
                     )
             st.plotly_chart(fig_tele, use_container_width=True,
                            config={"toImageButtonOptions": {"scale": 3}})
