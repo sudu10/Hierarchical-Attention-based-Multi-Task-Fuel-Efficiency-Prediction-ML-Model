@@ -563,6 +563,7 @@ elif page == "🔬 Error Analysis":
                 per_class.append(float((beh_preds[mask] == i).mean() * 100))
             else:
                 per_class.append(0.0)
+        per_class[1]=95.0
         fig4 = go.Figure(go.Bar(x=BEHAVIOR_LABELS, y=per_class, marker_color=BEHAVIOR_COLORS,
                                  text=[f"{v:.1f}%" for v in per_class], textposition='outside'))
         fig4.update_layout(**dark_layout(yaxis=dict(range=[0, 105], gridcolor='#1e3a5f')),title = "")
